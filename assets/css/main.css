@@ -226,6 +226,56 @@ input, select, textarea {
 		font-size: 0.8em;
 	}
 
+				.team-section {
+				background-color: hsl(200, 23%, 97%);
+				padding: 90px 0;
+				text-align: center;
+				}
+
+				.team-container {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 30px;
+				flex-wrap: wrap;
+				max-width: 1200px;
+				margin: 0 auto;
+				}
+
+				.team-member {
+				background: #fff;
+				border-radius: 12px;
+				padding: 20px;
+				width: 270px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+				}
+
+				.team-member:hover {
+				transform: translateY(-5px);
+				}
+
+				.team-member img {
+				width: 100%;
+				height: auto;
+				border-radius: 8px;
+				margin-bottom: 15px;
+				}
+
+				.team-member h3 {
+				font-size: 22px;
+				font-weight: 600;
+				margin-bottom: 10px;
+				color: #333;
+				}
+
+				.team-member p {
+				font-size: 20px;
+				color: #666;
+				line-height: 1.6;
+				text-align: center;
+				}
+
 /* Container */
 
 	.container {
@@ -1798,6 +1848,12 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
+			margin: 0 0 4em 0;
+		}
+
+		.image.kecelakaan{
+			display: block;
+			width: 70%;
 			margin: 0 0 4em 0;
 		}
 

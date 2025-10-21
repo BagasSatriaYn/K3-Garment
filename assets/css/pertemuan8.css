@@ -1,0 +1,448 @@
+/* Pertemuan 8 - P3K Styling */
+
+:root {
+    --primary-color: #8b6f47;
+    --secondary-color: #d4a574;
+    --accent-color: #c85a54;
+    --light-bg: #f5f1ed;
+    --dark-text: #3e3e3e;
+    --border-color: #e8ddd5;
+}
+
+.p8-banner {
+    background: linear-gradient(135deg, #8b6f47 0%, #a0826d 100%);
+    color: white;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.p8-banner header h2 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.p8-banner header p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1em;
+}
+
+
+/* Intro Section */
+
+.p8-intro {
+    background: linear-gradient(135deg, #f5f1ed 0%, #faf8f5 100%);
+    padding: 2em;
+    border-radius: 8px;
+    border-left: 4px solid #c85a54;
+    margin-bottom: 3em;
+}
+
+.p8-intro h2 {
+    color: #8b6f47;
+    margin-bottom: 1em;
+}
+
+.p8-intro p {
+    color: #3e3e3e;
+    line-height: 1.8;
+}
+
+
+/* Section Styling */
+
+.p8-section {
+    margin-bottom: 3em;
+}
+
+.p8-section h2 {
+    color: #8b6f47;
+    border-bottom: 3px solid #d4a574;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+
+/* Injury Grid */
+
+.injury-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+
+.injury-card {
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1ed 100%);
+    border: 2px solid #e8ddd5;
+    border-radius: 8px;
+    padding: 1.5em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.injury-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4a574;
+    box-shadow: 0 8px 20px rgba(139, 111, 71, 0.15);
+}
+
+.injury-icon {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.injury-card h3 {
+    color: #8b6f47;
+    margin-bottom: 0.5em;
+}
+
+.injury-card p {
+    color: #5b5b5b;
+    font-size: 0.95em;
+    margin-bottom: 1em;
+}
+
+.injury-detail {
+    background: rgba(200, 90, 84, 0.1);
+    padding: 0.75em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #3e3e3e;
+}
+
+
+/* Emergency Tabs */
+
+.emergency-tabs {
+    background: #faf8f5;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e8ddd5;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f5f1ed;
+    border-bottom: 2px solid #e8ddd5;
+}
+
+.tab-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 1em;
+    border: none;
+    background: transparent;
+    color: #5b5b5b;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    background: rgba(139, 111, 71, 0.05);
+    color: #8b6f47;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #8b6f47;
+    border-bottom-color: #c85a54;
+}
+
+.tab-content {
+    padding: 2em;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tab-pane h3 {
+    color: #8b6f47;
+    margin-bottom: 1em;
+}
+
+.tab-pane p {
+    color: #3e3e3e;
+    margin-bottom: 0.75em;
+    line-height: 1.8;
+}
+
+
+/* Treatment Accordion */
+
+.treatment-accordion {
+    background: #faf8f5;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e8ddd5;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e8ddd5;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1.25em;
+    background: #f5f1ed;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: #8b6f47;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: rgba(139, 111, 71, 0.1);
+}
+
+.accordion-header.active {
+    background: rgba(200, 90, 84, 0.1);
+    color: #c85a54;
+}
+
+.accordion-header .icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    display: none;
+    padding: 1.5em;
+    background: white;
+    color: #3e3e3e;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.accordion-content ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.accordion-content li {
+    margin-bottom: 0.75em;
+    line-height: 1.6;
+}
+
+.accordion-content strong {
+    color: #8b6f47;
+}
+
+.warning {
+    background: rgba(200, 90, 84, 0.1);
+    border-left: 4px solid #c85a54;
+    padding: 1em;
+    border-radius: 4px;
+    margin-top: 1em;
+    color: #3e3e3e;
+}
+
+
+/* Triage Grid */
+
+.triage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.triage-card {
+    border-radius: 8px;
+    padding: 1.5em;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.triage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.triage-red {
+    background: linear-gradient(135deg, #c85a54 0%, #a84a47 100%);
+}
+
+.triage-yellow {
+    background: linear-gradient(135deg, #d4a574 0%, #b8915f 100%);
+}
+
+.triage-green {
+    background: linear-gradient(135deg, #7ba87f 0%, #6a9470 100%);
+}
+
+.triage-black {
+    background: linear-gradient(135deg, #5b5b5b 0%, #3e3e3e 100%);
+}
+
+.triage-label {
+    font-size: 0.85em;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0.5em;
+}
+
+.triage-card h3 {
+    color: white;
+    margin-bottom: 0.75em;
+}
+
+.triage-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+}
+
+.triage-card strong {
+    color: white;
+}
+
+
+/* Vital Signs */
+
+.vital-signs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.vital-item {
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1ed 100%);
+    border: 2px solid #e8ddd5;
+    border-radius: 8px;
+    padding: 2em;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.vital-item:hover {
+    border-color: #d4a574;
+    box-shadow: 0 8px 20px rgba(139, 111, 71, 0.15);
+}
+
+.vital-letter {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8b6f47 0%, #a0826d 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0 auto 1em;
+}
+
+.vital-item h3 {
+    color: #8b6f47;
+    margin-bottom: 0.75em;
+}
+
+.vital-item p {
+    color: #3e3e3e;
+    line-height: 1.7;
+}
+
+
+/* Contacts Section */
+
+.p8-contacts {
+    background: linear-gradient(135deg, #f5f1ed 0%, #faf8f5 100%);
+    padding: 2em;
+    border-radius: 8px;
+    border: 2px solid #e8ddd5;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.contact-card {
+    background: white;
+    border: 2px solid #e8ddd5;
+    border-radius: 8px;
+    padding: 1.5em;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: #d4a574;
+    box-shadow: 0 8px 20px rgba(139, 111, 71, 0.15);
+}
+
+.contact-card h3 {
+    color: #8b6f47;
+    margin-bottom: 0.75em;
+}
+
+.contact-number {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #c85a54;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .p8-banner header h2 {
+        font-size: 1.8em;
+    }
+    .tab-btn {
+        min-width: 120px;
+        padding: 0.75em;
+        font-size: 0.9em;
+    }
+    .injury-grid,
+    .triage-grid,
+    .vital-signs,
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+    .accordion-header {
+        padding: 1em;
+    }
+    .accordion-content {
+        padding: 1em;
+    }
+}

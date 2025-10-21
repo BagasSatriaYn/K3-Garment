@@ -1,0 +1,436 @@
+    /* ============================================
+    Index Page Custom Styling
+    Earth Tones Color Scheme for K3 Garment
+    ============================================ */
+    
+     :root {
+        --primary-brown: #8b6f47;
+        --secondary-tan: #d4a574;
+        --accent-coral: #c85a54;
+        --light-cream: #f5e6d3;
+        --light-beige: #e8d4c4;
+        --dark-brown: #5c4a35;
+        --text-dark: #2c2c2c;
+    }
+    /* ============================================
+    BANNER SECTION
+    ============================================ */
+    
+    .banner-enhanced {
+        position: relative;
+        padding: 120px 20px;
+        background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-tan) 100%);
+        color: white;
+        text-align: center;
+        overflow: hidden;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+    
+    .banner-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        animation: slideInUp 0.8s ease-out;
+    }
+    
+    .banner-enhanced h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: -1px;
+    }
+    
+    .banner-enhanced p {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+        opacity: 0.95;
+        line-height: 1.6;
+    }
+    
+    .banner-cta {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .banner-cta .button {
+        padding: 14px 40px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .banner-cta .button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-cta .button.alt {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+    }
+    
+    .banner-cta .button.alt:hover {
+        background-color: white;
+        color: var(--primary-brown);
+    }
+    /* ============================================
+    TEAM SECTION
+    ============================================ */
+    
+    .team-section {
+        padding: 80px 20px;
+        background: linear-gradient(to bottom, #ffffff, var(--light-cream));
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-brown);
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .team-member {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-top: 4px solid var(--secondary-tan);
+    }
+    
+    .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 4px solid var(--light-beige);
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover img {
+        transform: scale(1.05);
+    }
+    
+    .team-member h3 {
+        font-size: 1.3rem;
+        color: var(--primary-brown);
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    .team-member p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    
+    .team-id {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+        color: var(--accent-coral);
+    }
+    /* ============================================
+    FEATURES SECTION
+    ============================================ */
+    
+    .feature-icon {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        display: inline-block;
+        animation: bounce 2s infinite;
+    }
+    
+    .feature-icon:nth-child(1) {
+        animation-delay: 0s;
+    }
+    
+    .feature-icon:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    .feature-icon:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    
+    .feature-link {
+        display: inline-block;
+        color: var(--accent-coral);
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .feature-link::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-coral);
+        transition: width 0.3s ease;
+    }
+    
+    .feature-link:hover::after {
+        width: 100%;
+    }
+    /* ============================================
+    STATS SECTION
+    ============================================ */
+    
+    .stats-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, var(--light-beige) 0%, var(--light-cream) 100%);
+    }
+    
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .stat-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-left: 5px solid var(--secondary-tan);
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--accent-coral);
+        margin-bottom: 10px;
+    }
+    
+    .stat-label {
+        font-size: 0.95rem;
+        color: #666;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    /* ============================================
+    VISION & MISSION SECTION
+    ============================================ */
+    
+    .vision-mission-section {
+        padding: 80px 20px;
+        background: white;
+    }
+    
+    .vision-mission-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .vision-card,
+    .mission-card {
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .vision-card {
+        background: linear-gradient(135deg, var(--light-cream) 0%, var(--light-beige) 100%);
+        border-top: 5px solid var(--primary-brown);
+    }
+    
+    .mission-card {
+        background: linear-gradient(135deg, var(--light-beige) 0%, var(--light-cream) 100%);
+        border-top: 5px solid var(--secondary-tan);
+    }
+    
+    .vision-card:hover,
+    .mission-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .vision-card h3,
+    .mission-card h3 {
+        font-size: 1.8rem;
+        color: var(--primary-brown);
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .vision-card p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.7;
+    }
+    
+    .mission-card ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .mission-card li {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 12px;
+        padding-left: 25px;
+        position: relative;
+        line-height: 1.6;
+    }
+    
+    .mission-card li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-coral);
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    /* ============================================
+    ANIMATIONS
+    ============================================ */
+    
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    /* ============================================
+    RESPONSIVE DESIGN
+    ============================================ */
+    
+    @media (max-width: 768px) {
+        .banner-enhanced {
+            padding: 80px 20px;
+            min-height: 400px;
+        }
+        .banner-enhanced h2 {
+            font-size: 2.2rem;
+        }
+        .banner-enhanced p {
+            font-size: 1rem;
+        }
+        .banner-cta {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .banner-cta .button {
+            width: 100%;
+        }
+        .team-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        .section-header h2 {
+            font-size: 2rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+        .stat-card {
+            padding: 30px 20px;
+        }
+        .stat-number {
+            font-size: 2rem;
+        }
+        .vision-mission-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .banner-enhanced h2 {
+            font-size: 1.8rem;
+        }
+        .banner-enhanced p {
+            font-size: 0.95rem;
+        }
+        .team-member {
+            padding: 20px;
+        }
+        .team-member h3 {
+            font-size: 1.1rem;
+        }
+        .section-header h2 {
+            font-size: 1.6rem;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+        }
+    }
